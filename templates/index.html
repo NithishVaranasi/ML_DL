@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>WEBSITE</title>
+    <link rel="stylesheet" href="../static/index.css">
+</head>
+
+<body>
+    <div class="blur-div"></div>
+    <div class="container">
+        <h2 class="heading">Fraud Transaction Detection</h2>
+        <div class="form-div">
+            <form action="/predict" method="post" name="myform">
+                <p>Select type : </p>
+                <select name="type">
+                    <option value="2">Payment</option>
+                    <option value="3">Cash in</option>
+                    <option value="4">Transfer</option>
+                    <option value="5">Debit</option>
+                </select>
+                <p>Enter  amount :</p>
+                <input type="text" name="amount">
+                <p>Enter old balance</p>
+                <input type="text" name="oldBal">
+                <p>Enter New Balance</p>
+                <input type="text" name="newBal">
+                <br><br>
+                <input id="submit-btn" type="submit">
+            </form>
+        </div>
+        <p><span>{{pred}}</span></p>
+    </div>
+
+</body>
+
+</html>
